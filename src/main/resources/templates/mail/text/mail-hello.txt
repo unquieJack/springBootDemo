@@ -1,0 +1,12 @@
+[(#{msg.hello})] [( ${name} )],
+
+[# th:if="${name.length() gt 10}"] 你的名字太长啦 [/]
+
+ [( ${#dates.format(subscriptionDate)} )]
+
+你的爱好:
+[# th:each="hobby : ${hobbies}"]
+ - [( ${hobby} )]
+[/]
+
+[(#{msg.content})]

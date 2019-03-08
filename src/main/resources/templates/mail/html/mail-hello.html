@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+  	<div>
+       <img src="logo.png" th:src="|cid:${imageResourceName}|" alt="http://www.denvp.com" style="display: block;" />
+  	</div>
+    <div>
+    	<span th:text="#{msg.hello}"></span> <span th:text="${name}"></span>,
+    </div>
+    
+    <div>
+    	<p th:text="#{msg.content}"></p>
+    </div>
+    
+    <div>
+    	<p th:text="#{msg.thank}"></p>
+    	<em><a href="http://www.denvp.com">www.denvp.com</a></em>
+    </div>
+  </body>
+</html>

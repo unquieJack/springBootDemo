@@ -1,0 +1,16 @@
+spring:
+  mail:
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+    efault-encoding: UTF-8  #设置编码 防止乱码
+    protocol: smtp
+    host: smtp.qq.com
+    port: 465
+    username: 597104677@qq.com
+    password: vkadwxdynuvmbeah
+  messages:
+    encoding: UTF-8
+    basename: com/devnp/message/MailMessage
