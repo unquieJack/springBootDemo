@@ -16,7 +16,7 @@ public class IndexController {
     @RequestMapping("/index")
     public String index() throws Exception{
         System.out.println("1111111111113333123123");
-        simpleMailSend.simpleSend("69934765@qq.com","test","hello mail");
+        simpleMailSend.simpleSend("6993476@qq.com","test","hello mail");
 
         simpleMailSend.sendWithHtml("69934765@qq.com","test","hello mail");
 
