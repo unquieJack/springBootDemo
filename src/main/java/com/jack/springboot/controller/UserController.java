@@ -5,6 +5,10 @@ import com.jack.springboot.domain.User;
 import com.jack.springboot.properties.UserProperties;
 import com.jack.springboot.service.UserService;
 import com.jack.springboot.util.ResultUtils;
+import com.jack.springboot.util.ShiroUtils;
+import org.apache.shiro.authc.*;
+import org.apache.shiro.crypto.hash.Sha256Hash;
+import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +16,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping(value="user")
@@ -99,4 +106,6 @@ public class UserController {
         this.userService.insertUser(user);
         return ResultUtils.success(user);
     }
+
+
 }
